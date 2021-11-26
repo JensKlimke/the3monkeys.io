@@ -119,12 +119,12 @@
     </div>
 
     <footer class="text-center text-lg-start text-muted text-tiny fixed-bottom">
-        <small>© 2021 Jens Klimke - Created and maintained with ❤️</small>
+        <small>© 2021 Jens Klimke - Created and maintained with ❤️<span id="version-info">Dev</span></small>
     </footer>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"></script>
 
     <!-- Popper.JS -->
@@ -139,10 +139,17 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
+
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
+
+            const url = 'https://api.github.com/repos/jensklimke/the3monkeys.io/tags';
+            $.get(url).done(data => {
+                $('#version-info').html(' - <a href="https://github.com/jensklimke/the3monkeys.io/commits/' + data[0].commit.sha + '" title="Go to commit">' + data[0].name + '</a>');
+            });
+
         });
     </script>
 </body>
