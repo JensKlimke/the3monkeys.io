@@ -2,7 +2,7 @@ BEGIN:VCARD
 VERSION:4.0
 N;CHARSET=UTF-8:Klimke;Jens;;;
 FN;CHARSET=UTF-8: Jens Klimke
-URL;PRIVATE:https://the3monkeys.io
+URL;PRIVATE:https://www.the3monkeys.io
 EMAIL;type=PRIVATE;type=PREF:jens@the3monkeys.io
 TEL;type=FAX;HOME:+4917670016551
 REV:2021-07-24T15:56:42+02:00
