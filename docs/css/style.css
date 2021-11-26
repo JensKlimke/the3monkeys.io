@@ -71,6 +71,12 @@ a:hover {
 }
 
 
+#title {
+    font-size: 40pt;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
 #sidebar {
     min-width: var(--sidebar-width);
     max-width: var(--sidebar-width);
