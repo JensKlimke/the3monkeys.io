@@ -115,12 +115,15 @@
                     </div>
                 </div>
             </div>
+
+            <footer class="text-center text-muted text-tiny">
+                <small>© 2021 Jens Klimke - Created and maintained with ❤️<span id="version-info">Dev</span></small>
+            </footer>
+
         </div>
+
     </div>
 
-    <footer class="text-center text-lg-start text-muted text-tiny fixed-bottom">
-        <small>© 2021 Jens Klimke - Created and maintained with ❤️<span id="version-info">Dev</span></small>
-    </footer>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -140,15 +143,27 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
+            // toggle sidebar
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
 
+            // footer area size (fill up page)
+            $( window ).resize(function() {
+                let position = $("#main-content").offset();
+                let height = $("#main-content").height();
+                console.log(position);
+                console.log(height);
+            });
+
+            // load current version (tag)
             const url = 'https://api.github.com/repos/jensklimke/the3monkeys.io/tags';
             $.get(url).done(data => {
+                console.log(data);
                 $('#version-info').html(' - <a href="https://github.com/jensklimke/the3monkeys.io/commits/' + data[0].commit.sha + '" title="Go to commit">' + data[0].name + '</a>');
             });
+
 
         });
     </script>

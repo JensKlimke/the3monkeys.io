@@ -10,7 +10,6 @@ body {
     --sidebar-width: 350px;
 
     background: #fafafa url("../img/raster.svg") repeat;
-
 }
 
 p {
@@ -153,6 +152,7 @@ ul ul a {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
+    position: relative;
     width: 100%;
     padding: 20px;
     min-height: 100vh;
@@ -206,6 +206,7 @@ ul ul a {
 #person-text {
     margin: 3em;
 }
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
