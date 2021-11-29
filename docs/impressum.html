@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
+  <!-- cookie consensus -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="favicon.png" sizes="120x120">
@@ -31,7 +34,7 @@
       <div class="card-body">
 
         <div id="title">
-          <a href="https://www.the3monkeys.io/" title="Zur Hauptseite">🙈 🙉 🙊</a>
+          <a href="https://www.the3monkeys.io" title="Zur Hauptseite">&#128584; &#128585; &#128586;</a>
         </div>
 
         <h1 class="ui header">Impressum</h1>
@@ -94,12 +97,33 @@
           Werbeinformationen, etwa durch Spam-Mails, vor.
         </p>
 
-        <h2 id="cookies">Verwendung von Cookies</h2>
-        <p>Auf dieser Seite kommen aktuell keine Cookies zum Einsatz. Es werden ausschließlich Cookies eingesetzt, um die Inhalte unserer
-          Seite ordnungsgemäß anzuzeigen und bedienen zu können (technisch notwendige Cookies). Für die Verwendung dieser
-          Cookies haben wir ein berechtigtes Interesse gem. Art. 6 Abs. 1 lit. f DSGVO. Die verwendeten Cookies sind für eine
-          Browser-Session gültig und werden nicht zum Tracken genutzt, sondern ausschließlich, um die freigeschalteten Inhalte
-          anzuzeigen, auch wenn kein Freigabe-Token mitgesendet wird.</p>
+        <h2 id="cookies">Cookies</h2>
+
+        <h3 id="google-analytics">Google Analytics</h3>
+
+        <p>Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. ("Google"). Google Analytics
+          verwendet sog. "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der
+          Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung
+          dieser Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und
+          dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um
+          Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der
+          Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese
+          Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte
+          diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten
+          der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung
+          Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls
+          nicht sämtliche Funktionen dieser Website vollumfänglich nutzen können. Durch die Nutzung dieser Website
+          erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art
+          und Weise und zu dem zuvor benannten Zweck einverstanden.</p>
+
+        <h3>Verwendung weiterer Cookies</h3>
+
+        <p>Auf dieser Seite kommen u.&nbsp;U. weitere Cookies (neben denen von Google Analytics) zum Einsatz. Diese
+          Cookies werden eingesetzt, um die Inhalte unserer Seite ordnungsgemäß anzuzeigen und bedienen zu können
+          (technisch notwendige Cookies). Für die Verwendung dieser Cookies haben wir ein berechtigtes Interesse gem.
+          Art. 6 Abs. 1 lit. f DSGVO. Die verwendeten Cookies sind für eine Browser-Session gültig und werden nicht zum
+          Tracken genutzt, sondern ausschließlich, um die freigeschalteten Inhalte anzuzeigen, auch wenn kein
+          Freigabe-Token mitgesendet wird.</p>
 
         <hr/>
         <p>Impressum vom <a href="https://www.impressum-generator.de">Impressum Generator</a> der <a
@@ -110,6 +134,19 @@
       </div>
     </div>
   </div>
+
+  <div class="alert text-center cookiealert" role="alert">
+    <small>
+      <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+      <button type="button" class="btn btn-primary btn-sm acceptcookies">
+        I agree
+      </button>
+    </small>
+  </div>
+
+  <!-- Cookie consensus -->
+  <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+
 
 </body>
 </html>

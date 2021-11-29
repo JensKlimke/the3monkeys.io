@@ -18,6 +18,9 @@
           integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- cookie consensus -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicon.png" sizes="120x120">
@@ -74,10 +77,14 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <!--<button type="button" id="sidebarCollapse" class="navbar-btn">
                         <span></span>
                         <span></span>
                         <span></span>
+                    </button>-->
+
+                    <button class="btn btn-light d-inline-block" type="button" id="sidebarCollapse">
+                        <i class="fas fa-angle-left"></i>
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
@@ -88,7 +95,7 @@
                                 <a class="nav-link" href="impressum.html">Impressum</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="https://www.the3monkeys.io/">🙈 🙉 🙊</a>
+                                <a class="nav-link" href="https://www.the3monkeys.io/">&#128584; &#128585; &#128586;</a>
                             </li>
                         </ul>
                     </div>
@@ -124,6 +131,15 @@
 
     </div>
 
+    <div class="alert text-center cookiealert" role="alert">
+      <small>
+        <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm acceptcookies">
+          I agree
+        </button>
+      </small>
+    </div>
+
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -140,27 +156,29 @@
             integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
             crossorigin="anonymous"></script>
 
+    <!-- Cookie consensus -->
+    <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
 
             // toggle sidebar
             $('#sidebarCollapse').on('click', function () {
+
+                // change icon
+                let ico = $('#sidebarCollapse > i');
+                ico.toggleClass('fa-angle-left');
+                ico.toggleClass('fa-angle-right');
+
+                // toggle active class
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
-            });
 
-            // footer area size (fill up page)
-            $( window ).resize(function() {
-                let position = $("#main-content").offset();
-                let height = $("#main-content").height();
-                console.log(position);
-                console.log(height);
             });
 
             // load current version (tag)
             const url = 'https://api.github.com/repos/jensklimke/the3monkeys.io/tags';
             $.get(url).done(data => {
-                console.log(data);
                 $('#version-info').html(' - <a href="https://github.com/jensklimke/the3monkeys.io/commits/' + data[0].commit.sha + '" title="Go to commit">' + data[0].name + '</a>');
             });
 
